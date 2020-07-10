@@ -9,7 +9,7 @@ function maxMinFx () {
 	for (i = 0; i < a-1 ; i++) {
 		var logit = i+2 // sets up tracking number for user
     //inform which entry user is inputing of a values. It prompts for more numbers, and informs of the present max/min.
-		var num2 = prompt ("Entry: " + logit + " of " + a + ". Enter your next interger. The present max is " + biggest + " and the present min is " + smallest + ".");
+		var num2 = prompt ("Entry: " + logit + " of " + a + ". Enter your next interger. \r The present max is " + biggest + " and the present min is " + smallest + ".");
     //????? if I enter 9 99 999 9999 ... the if statements break. Why?????
 			if (num2 > biggest ) { 
 				biggest = num2;} // replaces biggest number with new max.
@@ -17,18 +17,16 @@ function maxMinFx () {
 					smallest = num2;} // replaces smallest number with new min.
 	}
 	alert (biggest + " is the maximum and " + smallest + " is the minimum."); /final result
+	//ask to play again
+	var again = prompt ("Do you want to do more math? y or n");
 }
 
 maxMinFx (); // runs function
  
-//ask to play again
-var again = prompt ("Do you want to do more math? y or n");
 
 do {
 	maxMinFx () ;
-	var again = prompt ("Do you want to do more math? y or n");
-	if (again === "n") {break;}
 	} while (again == "y" ||again == "Y" ||again == "yes" ||again == "Yes" ||again == "YES" ); 
 	alert ("Thank you, good bye!"); //Any yes value will play again. Any other response teminates program
-  // ???????No matter what I input for the play again question, it loops 1 time before exiting. Why???
+  
   
